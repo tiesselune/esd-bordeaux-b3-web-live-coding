@@ -1,0 +1,19 @@
+{
+    "name" : "Woof 🐾!",
+    "short_name" : "Woof",
+    "lang" : "en-US",
+    "description" : "See a different picture of dog everyday!",
+    "icons" : [
+        {
+            "src" : "/assets/icon_maskable.png",
+            "sizes" : "512x512",
+            "type" : "image/png",
+            "purpose" : "any maskable"
+        }
+    ],
+    "display" : "standalone",
+    "background_color" : "#0a75ff",
+    "theme_color" : "#0a75ff",
+    "scope" : "/",
+    "start_url" : "/"
+}
