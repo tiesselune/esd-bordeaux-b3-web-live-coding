@@ -1,5 +1,3 @@
-import { saveImages } from "./cache.js";
-
 const url = "https://dog.ceo/api/breeds/image/random";
 const img = document.querySelector("#picture");
 const button = document.querySelector("#randomizer");
@@ -20,7 +18,19 @@ const getPicture = async () => {
     }
 }
 
+const registerSW = async () => {
+    if("serviceWorker" in navigator){
+        try {
+            await navigator.serviceWorker.register("/sw.js",{scope : "/"})
+        }
+        catch(e){
+            console.error(e);
+        }
+    }
+}
+
 getPicture();
-saveImages(5);
 
 button.addEventListener("click", getPicture);
+
+registerSW();
